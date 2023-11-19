@@ -1,10 +1,7 @@
 public class MustPopularCharForExactThisArray {
-    private char[] letters = {'a', 'a', 'a', 'b', 'b', 'c', 'f', 'a', 'a'};
+    private static char[] letters = {'a', 'a', 'a', 'b', 'b', 'c', 'f', 'a', 'a'};
 
-    public MustPopularCharForExactThisArray() {
-    }
-
-    private char getCandidate() {
+    private static char getCandidate() {
         int candidateRepeatCount = 0;
         char candidate = '-';
         for (char letter : letters) {
@@ -17,8 +14,7 @@ public class MustPopularCharForExactThisArray {
         return candidate;
     }
 
-    private boolean validate(char[] letters, char aChar) {
-        this.letters = letters;
+    private static boolean validate(char[] letters, char aChar) {
         int count = 0;
         for (char someChar : letters) {
             if(someChar == aChar) {
@@ -28,7 +24,7 @@ public class MustPopularCharForExactThisArray {
         return count >= letters.length / 2;
     }
 
-    public void findMustPopularChar() {
+    public static void findMustPopularChar() {
         char candidate = getCandidate();
         if(candidate == '-') {
             System.out.println('-');
