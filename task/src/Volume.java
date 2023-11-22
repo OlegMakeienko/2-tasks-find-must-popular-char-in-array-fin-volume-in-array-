@@ -12,6 +12,8 @@ public class Volume {
             leftToRightWaterFill[i] = leftMaxBorder;
         }
 
+
+
         int [] rightToRightWaterFill = new int[borders.length];
         for (int i = borders.length - 1; i >= 0; i--) {
             rightMaxBorder = Math.max(rightMaxBorder, borders[i]);
@@ -24,5 +26,9 @@ public class Volume {
         }
 
         System.out.println(volume);
+    }
+
+    private void nonFunction() {
+
     }
 }
